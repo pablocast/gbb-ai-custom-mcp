@@ -1,0 +1,14 @@
+{
+  "name": "customer-mcp-gateway",
+  "version": "0.1.0",
+  "description": "Custom MCP gateway with Entra token validation for Foundry agent calls",
+  "type": "module",
+  "main": "src/server.js",
+  "scripts": {
+    "start": "node src/server.js"
+  },
+  "dependencies": {
+    "express": "^4.21.2",
+    "jose": "^5.9.6"
+  }
+}

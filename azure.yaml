@@ -1,0 +1,14 @@
+name: gbb-ai-custom-mcp
+metadata:
+  template: gbb-ai-custom-mcp@0.0.1
+infra:
+  provider: bicep
+  path: infra
+services:
+  gateway:
+    project: ./gateway
+    language: js
+    host: containerapp
+    docker:
+      path: ./Dockerfile
+      registry: ${AZURE_CONTAINER_REGISTRY_ENDPOINT}
