@@ -1,4 +1,4 @@
-# <img src="docs/img/foundry-mcp-setup/ai-foundry.png" height="32" alt="Azure AI Foundry" />  Foundry -> Entra-Protected FastMCP Gateway
+# <img src="docs/images/foundry-mcp-setup/ai-foundry.png" height="32" alt="Azure AI Foundry" />  Foundry -> Entra-Protected FastMCP Gateway
 
 This repo deploys a custom MCP gateway to Azure Container Apps and secures it with Microsoft Entra ID for Foundry agent access.
 
