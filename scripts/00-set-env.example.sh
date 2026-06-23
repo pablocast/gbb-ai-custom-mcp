@@ -13,7 +13,8 @@ export NAME_PREFIX="gbbmcp"
 export ENTRA_TENANT_ID="<tenant-id>"
 export GATEWAY_APP_DISPLAY_NAME="gbb-customer-mcp-gateway"
 # Usually set to api://<appId-guid> by script 01.
-export GATEWAY_APP_ID_URI=""
+export GATEWAY_APP_ID="<appId-guid>"
+export GATEWAY_APP_ID_URI="api://<appId-guid>"
 
 # Optional app role name enforced by your gateway logic
 export GATEWAY_REQUIRED_APP_ROLE="Mcp.AppInvoke"
@@ -28,6 +29,6 @@ export ACA_APP_NAME="${NAME_PREFIX}-gateway"
 export IMAGE_REPO="customer-mcp-gateway"
 export IMAGE_TAG="v1"
 
-# Foundry project (for script 03)
+# Foundry project (for script 02)
 export FOUNDRY_PROJECT_RESOURCE_ID="/subscriptions/<sub>/resourceGroups/<rg>/providers/Microsoft.CognitiveServices/accounts/<account>/projects/<project>"
 export FOUNDRY_CONNECTION_NAME="customer-mcp-gateway"
