@@ -16,7 +16,7 @@ export GATEWAY_APP_DISPLAY_NAME="gbb-customer-mcp-gateway"
 export GATEWAY_APP_ID_URI=""
 
 # Optional app role name enforced by your gateway logic
-export GATEWAY_REQUIRED_APP_ROLE="Mcp.Invoke"
+export GATEWAY_REQUIRED_APP_ROLE="Mcp.AppInvoke"
 
 # Foundry identity client id allow-list (comma-separated), optional
 export ALLOWED_CLIENT_IDS=""
