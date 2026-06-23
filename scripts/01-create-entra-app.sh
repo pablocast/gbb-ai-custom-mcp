@@ -70,6 +70,7 @@ else
   cat > "$patch_body" <<JSONBODY
 {
   "api": {
+    "requestedAccessTokenVersion": 2,
     "oauth2PermissionScopes": [
       {
         "adminConsentDescription": "Allow callers to invoke MCP gateway API",
