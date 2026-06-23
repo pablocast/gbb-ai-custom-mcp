@@ -8,7 +8,6 @@ param entraTenantId string
 @minLength(1)
 param gatewayAudience string
 param allowedClientIds string = ''
-param acaLocation string 
 param modelDeploymentName string = 'gpt54mini'
 param modelName string = 'gpt-5.4-mini'
 param modelVersion string = '2026-03-17'
@@ -16,7 +15,7 @@ param modelSkuName string = 'GlobalStandard'
 param modelCapacity string = '10'
 
 var resourceToken = uniqueString(subscription().id, resourceGroup().id, location, environmentName)
-var acaToken = uniqueString(subscription().id, resourceGroup().id, acaLocation, environmentName, 'aca2')
+var acaToken = uniqueString(subscription().id, resourceGroup().id, location, environmentName, 'aca2')
 
 var acrName = 'azacr${resourceToken}'
 var logAnalyticsName = 'azlog${resourceToken}'
@@ -72,7 +71,7 @@ resource acrPullRoleAssignment 'Microsoft.Authorization/roleAssignments@2022-04-
 
 resource containerAppEnvironment 'Microsoft.App/managedEnvironments@2024-03-01' = {
   name: containerAppEnvName
-  location: acaLocation
+  location: location
   properties: {
     appLogsConfiguration: {
       destination: 'log-analytics'
@@ -135,7 +134,7 @@ resource foundryModelDeployment 'Microsoft.CognitiveServices/accounts/deployment
 
 resource containerApp 'Microsoft.App/containerApps@2024-03-01' = {
   name: containerAppName
-  location: acaLocation
+  location: location
   tags: {
     'azd-service-name': 'gateway'
   }

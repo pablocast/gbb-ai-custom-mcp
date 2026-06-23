@@ -17,9 +17,6 @@
     "allowedClientIds": {
       "value": "${ALLOWED_CLIENT_IDS}"
     },
-    "acaLocation": {
-      "value": "${ACA_LOCATION}"
-    },
     "modelDeploymentName": {
       "value": "${FOUNDRY_MODEL_DEPLOYMENT_NAME}"
     },
